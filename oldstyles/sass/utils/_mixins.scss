@@ -1,0 +1,10 @@
+@mixin transition($property, $duration: 250ms) {
+  transition: $property $duration cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+$transition: (
+  'border': border $duration $cubic,
+  'background-color': background-color $duration $cubic,
+  'color': color $duration $cubic,
+  'box-shadow': box-shadow $duration $cubic,
+);

@@ -1,0 +1,41 @@
+/* Ссылки на соц сети */
+
+.sosial-icons {
+  width: 20px;
+  height: 20px;
+  fill: $sosial-icon;
+
+  @include transition(fill);
+}
+
+.team-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  @extend %centered;
+  @include transition(background-color);
+}
+
+.sosial-list {
+  margin-right: 32px;
+  margin-left: 32px;
+  margin-bottom: 30px;
+}
+
+.sosial-list > li:not(:last-child),
+.join-list > li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.media-link:hover .team-circle,
+.media-link:focus .team-circle,
+.media-link:hover .join-circle,
+.media-link:focus .join-circle {
+  background-color: $active-color;
+}
+
+.media-link:hover .sosial-icons,
+.media-link:focus .sosial-icons {
+  fill: $secondary-color;
+}

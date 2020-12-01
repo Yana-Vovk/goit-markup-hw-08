@@ -1,0 +1,41 @@
+/* Стили для списка кнопок фильтра */
+.filter {
+  margin-bottom: 50px;
+
+  .button {
+    display: inline-block;
+    min-width: 73px;
+    font-family: 'Roboto', sans-serif;
+    color: $heading-color;
+    background-color: $light-background;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    padding: 6px 22px;
+
+    transition: map-get($transition, 'background-color'),
+      map-get($transition, 'box-shadow'), map-get($transition, 'color');
+  }
+
+  .button:hover,
+  .button:focus {
+    color: $secondary-color;
+    background-color: $active-color;
+    border: none;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  .list {
+    @extend %flex-wrap;
+    justify-content: center;
+  }
+
+  .li-item + .li-item {
+    margin-left: 8px;
+  }
+}

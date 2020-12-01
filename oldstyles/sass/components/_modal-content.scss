@@ -1,0 +1,137 @@
+.fill-in {
+  display: inline-flex;
+  flex-direction: column;
+
+  .button.modal-btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 56px;
+    padding-right: 56px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.txtarea {
+  width: 448px;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+
+  @include transition(border);
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: $plcholder;
+  }
+
+  &:focus {
+    border-color: $active-color;
+  }
+}
+
+.modal-heading {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: $heading-color;
+
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.acception {
+  @extend %centered;
+  text-align: center;
+}
+
+.chk-box {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+
+  &:checked + .chk-icon {
+    background-color: $active-color;
+    border-color: $active-color;
+    background-origin: border-box;
+    background-image: url(../images/svg-icons/icon-check.svg);
+    background-size: contain;
+  }
+
+  &:focus + .chk-icon {
+    outline: 3px solid black;
+  }
+}
+
+.chk-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid $heading-color;
+  border-radius: 2px;
+  background-color: transparent;
+
+  transition: map-get($transition, 'border'),
+    map-get($transition, 'background-color');
+}
+
+.act-lbl {
+  display: flex;
+  align-items: center;
+}
+
+.lable-txt {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+.input-position {
+  position: relative;
+}
+
+.input-box {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: none;
+  @include transition(border);
+
+  &:focus + .field {
+    fill: $active-color;
+  }
+
+  &:focus {
+    border-color: $active-color;
+  }
+}
+
+.field {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  fill: $heading-color;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include transition(fill);
+}
+
+.hyperlink {
+  margin-left: 5px;
+}

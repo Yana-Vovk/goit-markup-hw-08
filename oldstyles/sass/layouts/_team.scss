@@ -1,0 +1,44 @@
+/* Стили для раздела наша команда */
+.team {
+  background-color: $light-background;
+
+  .list {
+    @extend %flex-wrap;
+    align-items: flex-start;
+  }
+
+  .li-item {
+    background: $secondary-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    width: calc((100% - 90px) / 4);
+  }
+
+  .li-item:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+
+  .li-item:not(:nth-last-child(-n + 4)) {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $main-color;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+  }
+}

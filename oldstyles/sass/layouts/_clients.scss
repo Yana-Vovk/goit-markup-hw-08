@@ -1,0 +1,32 @@
+/* Секция клиенты */
+.clients .list {
+  display: flex;
+}
+
+.clients-box {
+  width: 170px;
+  height: 90px;
+  border: 1px solid $sosial-icon;
+  border-radius: 4px;
+  @extend %centered;
+  @include transition(border);
+
+  .customer-link:hover &,
+  .customer-link:focus & {
+    border: 1px solid $active-color;
+  }
+}
+
+.clients li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-icon {
+  fill: $sosial-icon;
+  @include transition(fill);
+
+  .customer-link:hover &,
+  .customer-link:focus & {
+    fill: $active-color;
+  }
+}

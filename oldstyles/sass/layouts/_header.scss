@@ -1,0 +1,94 @@
+/* Стиль хэдера */
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.headnav {
+  margin-left: 93px;
+
+  .li-item + .li-item {
+    margin-left: 50px;
+  }
+
+  .link {
+    color: $heading-color;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    @include transition(color);
+  }
+
+  .li-item {
+    position: relative;
+  }
+
+  .current::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: $active-color;
+    border-radius: 2px;
+
+    position: absolute;
+    left: 0;
+    bottom: -28.5px;
+  }
+}
+
+.contacts {
+  margin-left: auto;
+
+  .li-item + .li-item {
+    margin-left: 50px;
+  }
+
+  .link {
+    color: $main-color;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    @include transition(color);
+  }
+
+  &-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    margin-right: 10px;
+
+    @include transition(fill);
+  }
+}
+
+.head-line {
+  border-bottom: 1px solid $line-header;
+}
+
+/* Стили для шапки */
+.headnav .link:hover,
+.headnav .link:focus,
+.contacts .link:hover,
+.contacts .link:focus,
+.headnav .current,
+.address:hover,
+.address:focus,
+.info:hover,
+.info:focus,
+.logo-blue {
+  color: $active-color;
+}
+
+.contacts .link:hover .contacts-icon,
+.contacts .link:focus .contacts-icon,
+.close-button:hover .close-x,
+.close-button:focus .close-x {
+  fill: $active-color;
+}
