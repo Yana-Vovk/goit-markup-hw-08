@@ -674,8 +674,15 @@ body {
 
 /* Раздел чем мы занимаемся */
 .inside-section {
-  margin-top: 94px;
-  padding-bottom: 94px;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .inside-section {
+    display: block;
+    margin-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .inside-section .li-item:not(:nth-child(3n)) {

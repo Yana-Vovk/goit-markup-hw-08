@@ -74,17 +74,8 @@
 
 .grey-box {
   @extend %centered;
-  // width: 450px;
   height: 120px;
   background-color: $light-background;
   margin-bottom: 30px;
   border-radius: 4px;
-
-  // @media screen and (min-width: $desktop) {
-  //   width: 354px;
-  // }
-
-  // @media screen and (min-width: $desktop) {
-  //   width: 270px;
-  // }
 }

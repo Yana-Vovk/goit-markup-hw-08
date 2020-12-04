@@ -1,7 +1,12 @@
 /* Раздел чем мы занимаемся */
 .inside-section {
-  margin-top: 94px;
-  padding-bottom: 94px;
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    margin-top: 94px;
+    padding-bottom: 94px;
+  }
 
   .list {
     @extend %flex-wrap;
