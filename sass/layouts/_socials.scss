@@ -18,9 +18,14 @@
 }
 
 .sosial-list {
-  margin-right: 32px;
-  margin-left: 32px;
   margin-bottom: 30px;
+}
+
+.list.sosial-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .sosial-list > li:not(:last-child),
