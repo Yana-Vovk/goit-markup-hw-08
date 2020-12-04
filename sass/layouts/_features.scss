@@ -1,0 +1,90 @@
+/* Стиль раздела особенности */
+
+.features {
+  padding-top: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+  }
+
+  .li-item {
+    width: 100%;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 270px;
+    }
+  }
+
+  .list {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .li-item {
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 90px) / 4);
+    }
+  }
+
+  .li-item:not(:nth-child(2n)) {
+    @media screen and (min-width: $tablet) {
+      margin-right: 30px;
+    }
+  }
+
+  .li-item:not(:nth-child(4n)) {
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
+  }
+
+  .li-item:not(:nth-last-child(-n + 4)) {
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.features p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
+  }
+}
+
+.grey-box {
+  @extend %centered;
+  // width: 450px;
+  height: 120px;
+  background-color: $light-background;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  // @media screen and (min-width: $desktop) {
+  //   width: 354px;
+  // }
+
+  // @media screen and (min-width: $desktop) {
+  //   width: 270px;
+  // }
+}
