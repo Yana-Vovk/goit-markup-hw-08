@@ -3,6 +3,14 @@
 .features {
   padding-top: 60px;
 
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
   @media screen and (min-width: $desktop) {
     padding-top: 94px;
   }

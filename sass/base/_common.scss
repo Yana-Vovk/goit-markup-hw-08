@@ -1,7 +1,6 @@
 *,
 ::after,
 ::before {
-  // box-sizing: inherit;
   outline: 1px solid blueviolet;
 }
 
@@ -64,6 +63,11 @@ h6 {
 
 /* Внутренние отступы секций */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
