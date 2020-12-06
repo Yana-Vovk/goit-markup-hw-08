@@ -9,12 +9,24 @@
   color: $secondary-color;
 
   @include transition(color);
+
+  @media screen and (max-width: $desktop-1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .info {
   color: $footer-color;
 
   @include transition(color);
+
+  @media screen and (max-width: $desktop-1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Стили для адреса в футере */
@@ -40,15 +52,47 @@
   text-transform: uppercase;
   color: $secondary-color;
   margin-bottom: 20px;
+
+  @media screen and (max-width: $desktop-1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.subbmit-title {
+  @media screen and (max-width: $desktop-1) {
+    margin-top: 60px;
+  }
+}
+
+.join-title {
+  @media screen and (max-width: $tablet-1) {
+    margin-top: 60px;
+  }
+}
+
+.footer-address {
+  @media screen and (max-width: $desktop-1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footer-wrap {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .join-list {
   display: flex;
+
+  @media screen and (max-width: $desktop-1) {
+    justify-content: center;
+  }
 }
 
 .join-icons {
@@ -66,9 +110,15 @@
   @include transition(background-color);
 }
 
+.join {
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
+}
+
 /* Стилицация инпута в футере */
 .subbmit-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -82,6 +132,21 @@
   line-height: 1.25;
   align-items: center;
   color: $footer-color;
+
+  @media screen and (max-width: $desktop-1) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
 }
 
 .subbmit .button.foot-btn {
@@ -91,6 +156,12 @@
   padding-right: 63px;
   background-color: $join-sircle;
   @include transition(background-color);
+
+  @media screen and (max-width: $desktop-1) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .button.foot-btn:hover,
@@ -108,4 +179,17 @@
   width: 24px;
   height: 24px;
   margin-left: 10px;
+}
+
+.tablet-wrap {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.tablet-wrap {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
