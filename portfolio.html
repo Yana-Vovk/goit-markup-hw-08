@@ -15,10 +15,10 @@
     <!-- Шапка сайта -->
     <header class="head-line">
         <!-- Шапка для мобилки -->
-        <div class="header header-mobile container">
+        <nav class="header header-mobile container">
             <a class="logo-head link" href="./index.html" lang="en"><span class="logo-blue">Web</span>Studio</a>
 
-            <button class="mobile-btn" type="button">
+            <button class="menu-button" type="button" data-menu-button>
                 <svg class="mobile-btn-pic">
                     <use class="mobile-lines" href="./images/svg-icons/sprite.svg#menu_lines">
                     </use>
@@ -27,7 +27,7 @@
                 </svg>
             </button>
 
-            <div class="mobile-navigation">
+            <div class="mobile-navigation" data-menu>
                 <ul class="headnav list">
                     <li class="li-item"><a class="current link current-line" href="./index.html">Студия</a></li>
                     <li class="portfolio li-item"><a class="link" href="./portfolio.html" target="_blank">Портфолио</a>
@@ -57,7 +57,7 @@
             </div>
 
 
-        </div>
+        </nav>
 
         <div class="header-desktop container">
             <div class="header flex">
@@ -106,9 +106,9 @@
                     <ul class="list">
                         <li class="li-item"><button class="button" type="button">Все</button></li>
                         <li class="li-item"><button class="button" type="button">Веб-сайты</button></li>
+                        <li class="li-item"><button class="button" type="button">Приложения</button></li>
                         <li class="li-item"><button class="button" type="button">Дизайн</button></li>
                         <li class="li-item"><button class="button" type="button">Маркетинг</button></li>
-                        <li class="li-item"><button class="button" type="button">Приложения</button></li>
                     </ul>
                 </div>
             </section>
@@ -132,14 +132,6 @@
                                                 шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                     </div>
-                                    <!-- <div class="overlay-box"><img src="./images/portfolio_1.jpg"
-                                            alt="Изображение стартовой страницы сайта Технокряк" width="370"
-                                            height="294">
-                                        <p class="overlay">Технокряк это современная площадка распространения
-                                            коронавируса.
-                                            Компании используют эту платформу для цифрового
-                                            шпионажа и атак на защищённые сервера конкурентов.</p>
-                                    </div> -->
                                     <h3>Технокряк</h3>
                                     <p>Веб-сайт</p>
                                 </div>
@@ -374,6 +366,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

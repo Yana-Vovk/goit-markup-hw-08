@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    z-index: 99;
   }
 
   @media screen and (min-width: $tablet), (min-width: $desktop) {

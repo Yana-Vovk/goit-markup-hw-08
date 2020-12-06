@@ -28,6 +28,8 @@
   height: 100%;
   background-color: $bkg-drop;
 
+  overflow-y: scroll;
+
   opacity: 1;
   z-index: 99;
   @include transition(opacity, 350ms);
@@ -35,8 +37,13 @@
 
 .modal {
   position: relative;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
+
+  @media screen and (max-width: $desktop-1) {
+    margin-top: 93px;
+  }
+
   padding: 40px;
   top: 50%;
   left: 50%;
@@ -47,6 +54,11 @@
 
   transform: translate(-50%, -50%) scale(1);
   @include transition(transform, 350ms);
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .close-x {

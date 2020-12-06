@@ -33,9 +33,27 @@
   .list {
     @extend %flex-wrap;
     justify-content: center;
+
+    @media screen and (max-width: $tablet-1) {
+      justify-content: start;
+    }
+  }
+
+  .li-item {
+    @media screen and (max-width: $tablet-1) {
+      margin-right: 8px;
+    }
+  }
+
+  .li-item:not(:nth-last-child(-n + 2)) {
+    @media screen and (max-width: $tablet-1) {
+      margin-bottom: 15px;
+    }
   }
 
   .li-item + .li-item {
-    margin-left: 8px;
+    @media screen and (min-width: $tablet), (min-width: $desktop) {
+      margin-left: 8px;
+    }
   }
 }
