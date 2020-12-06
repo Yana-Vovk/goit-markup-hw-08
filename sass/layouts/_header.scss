@@ -1,4 +1,105 @@
 /* Стиль хэдера */
+.header-mobile {
+  @media screen and (max-width: $tablet-1) {
+    display: block;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  @media screen and (min-width: $tablet), (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.mobile-btn,
+.mobile-btn-pic {
+  @media screen and (max-width: $tablet-1) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.mobile-btn {
+  @media screen and (max-width: $tablet-1) {
+    margin-left: auto;
+    position: relative;
+    background-color: #fff;
+    border: none;
+  }
+}
+
+.mobile-btn-pic {
+  @media screen and (max-width: $tablet-1) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.mobile-navigation {
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $secondary-color;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .headnav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 18px;
+    line-height: 1.17;
+  }
+
+  .contacts {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+
+  .portfolio {
+    margin-top: 52px;
+    margin-bottom: 40px;
+  }
+
+  .mail {
+    margin-top: 60px;
+    margin-bottom: 16px;
+  }
+}
+
+.header-desktop {
+  @media screen and (max-width: $tablet-1) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet), (min-width: $desktop) {
+    display: block;
+  }
+}
+
+.contacts.flex {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    display: block;
+    justify-content: flex-start;
+  }
+}
+
+.header-desktop .mail {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    margin-bottom: 10px;
+  }
+}
+
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
@@ -10,10 +111,18 @@
 }
 
 .headnav {
-  margin-left: 93px;
+  @media screen and (min-width: $tablet) {
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 
   .li-item + .li-item {
-    margin-left: 50px;
+    @media screen and (min-width: $tablet), (min-width: $desktop) {
+      margin-left: 50px;
+    }
   }
 
   .link {
@@ -38,15 +147,38 @@
 
     position: absolute;
     left: 0;
-    bottom: -28.5px;
+    bottom: -10px;
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+      bottom: -30.5px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      bottom: -28.5px;
+    }
+  }
+}
+
+.header-desktop .contacts {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    font-size: 12px;
+    line-height: 1.17;
   }
 }
 
 .contacts {
-  margin-left: auto;
+  @media screen and (min-width: $tablet), (min-width: $desktop) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    margin-left: 84px;
+  }
 
   .li-item + .li-item {
-    margin-left: 50px;
+    @media screen and (min-width: $desktop) {
+      margin-left: 50px;
+    }
   }
 
   .link {
@@ -61,8 +193,15 @@
   &-icon {
     width: 16px;
     height: 16px;
-    fill: currentColor;
     margin-right: 10px;
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+
+    fill: currentColor;
 
     @include transition(fill);
   }
