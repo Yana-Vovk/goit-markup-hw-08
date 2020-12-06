@@ -1,15 +1,79 @@
 /* Секция клиенты */
 .clients .list {
   display: flex;
+
+  @media screen and (max-width: $desktop-1) {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+.clients li {
+  width: 100%;
+  max-width: 210px;
+
+  @media screen and(max-width:$desktop-1) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width:$tablet) {
+    max-width: 226px;
+    width: calc((100% - 60px) / 3);
+  }
+
+  @media screen and(min-width:$desktop) {
+    max-width: 170px;
+  }
+
+  @media screen and (max-width: $tablet-1) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  // @media screen and (min-width: $tablet) {
+  //   width: calc((100% - 60px) / 3);
+  // }
+}
+
+.clients li:nth-child(2n) {
+  @media screen and(max-width:$tablet-1) {
+    margin-right: 0;
+  }
+}
+
+.clients li:nth-last-child(-n + 2) {
+  @media screen and(max-width:$tablet-1) {
+    margin-bottom: 0;
+  }
+}
+
+.clients li:nth-child(3n + 3) {
+  @media screen and(min-width:$tablet) {
+    margin-right: 0;
+  }
+}
+
+.clients li:nth-last-child(-n + 3) {
+  @media screen and(min-width:$tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .clients-box {
-  width: 170px;
+  max-width: 210px;
   height: 90px;
   border: 1px solid $sosial-icon;
   border-radius: 4px;
   @extend %centered;
   @include transition(border);
+
+  @media screen and(min-width:$tablet) {
+    max-width: 226px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    max-width: 170px;
+  }
 
   .customer-link:hover &,
   .customer-link:focus & {
@@ -18,7 +82,9 @@
 }
 
 .clients li:not(:last-child) {
-  margin-right: 30px;
+  @media screen and(min-width:$desktop) {
+    margin-right: 30px;
+  }
 }
 
 .client-icon {

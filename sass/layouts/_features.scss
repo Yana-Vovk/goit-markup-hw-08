@@ -1,19 +1,22 @@
 /* Стиль раздела особенности */
 
 .features {
-  padding-top: 60px;
-
-  @media screen and (min-width: $mobile) {
-    margin-bottom: 60px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 30px;
-  }
-
   @media screen and (min-width: $desktop) {
-    padding-top: 94px;
+    padding-bottom: 0;
   }
+  // padding-top: 60px;
+
+  // @media screen and (min-width: $mobile) {
+  //   margin-bottom: 60px;
+  // }
+
+  // @media screen and (min-width: $tablet) {
+  //   margin-bottom: 30px;
+  // }
+
+  // @media screen and (min-width: $desktop) {
+  //   padding-top: 94px;
+  // }
 
   .li-item {
     width: 100%;
@@ -21,12 +24,26 @@
     margin-right: auto;
     margin-left: auto;
 
+    @media screen and(max-width:$desktop-1) {
+      margin-bottom: 30px;
+    }
+
     @media screen and (min-width: $desktop) {
       max-width: 354px;
     }
 
     @media screen and (min-width: $desktop) {
       max-width: 270px;
+    }
+  }
+
+  .li-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .li-item:nth-last-child(-n + 2) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
     }
   }
 
@@ -73,7 +90,7 @@
 
 .features p {
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 
   @media screen and (min-width: $desktop) {
     margin-bottom: 0px;
