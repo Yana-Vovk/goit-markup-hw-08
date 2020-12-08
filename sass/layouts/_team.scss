@@ -9,6 +9,12 @@
     }
   }
 
+  .pic-team {
+    @media screen and (max-width: $tablet-1) {
+      width: 450px;
+    }
+  }
+
   img {
     @media screen and (min-width: $tablet) {
       margin-left: auto;
