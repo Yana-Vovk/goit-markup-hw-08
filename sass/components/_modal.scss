@@ -37,11 +37,15 @@
 
 .modal {
   position: relative;
-  width: 450px;
   height: 609px;
 
   @media screen and (max-width: $desktop-1) {
     margin-top: 93px;
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 450px;
   }
 
   padding: 40px;

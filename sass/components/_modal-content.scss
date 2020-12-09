@@ -1,8 +1,9 @@
 .fill-in {
-  display: inline-flex;
-  flex-direction: column;
+  // display: inline-flex;
+  // flex-direction: column;
 
   .button.modal-btn {
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     padding-left: 56px;
@@ -12,7 +13,8 @@
 }
 
 .txtarea {
-  width: 370px;
+  width: 100%;
+  // width: 370px;
   height: 120px;
   resize: none;
   padding: 12px 16px;
@@ -112,7 +114,8 @@
 }
 
 .input-box {
-  width: 370px;
+  width: 100%;
+  // width: 370px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
