@@ -83,7 +83,7 @@
 /* Делаем картинки блочными */
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -257,6 +257,11 @@ h6 {
 .mobile-navigation .portfolio {
   margin-top: 52px;
   margin-bottom: 40px;
+}
+
+.mobile-navigation .portfolio-mobile {
+  margin-top: 40px;
+  margin-bottom: 52px;
 }
 
 .mobile-navigation .mail {
