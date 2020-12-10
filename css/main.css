@@ -921,6 +921,11 @@ body {
 }
 
 /* Стили для первой страницы */
+.for-mobile-nav {
+  position: relative;
+  overflow: hidden;
+}
+
 .hero {
   background-color: #c4c4c4;
   background-repeat: no-repeat;

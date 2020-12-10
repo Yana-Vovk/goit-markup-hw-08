@@ -1,4 +1,9 @@
 /* Стили для первой страницы */
+.for-mobile-nav {
+  position: relative;
+  overflow: hidden;
+}
+
 .hero {
   background-color: $hero-background;
   background-repeat: no-repeat;
